@@ -1,3 +1,24 @@
+class Quiz:
+    def __init__(self, question, choices, answer):
+        self.question = question
+        self.choices = choices
+        self.answer = answer
+
+    def show_question(self):
+        print(self.question)
+        for number, choice in enumerate(self.choices, start=1):
+            print(number, choice)
+
+    def check_answer(self, user_answer):
+        return user_answer == self.answer
+
+quiz1 = Quiz(
+    "달리기를 시작하기 전에 하면 좋은 것은?",
+    ["준비운동", "바로 전력 질주", "움직이지 않기", "신발 벗기"],
+    1
+)
+
+quiz1.show_question()
 print("운동·러닝 퀴즈 게임에 오신 것을 환영합니다!")
 
 while True:
