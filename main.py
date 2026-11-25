@@ -85,7 +85,11 @@ while True:
     elif choice == "2":
         print("퀴즈 추가를 선택했습니다.")
     elif choice == "3":
-        print("퀴즈 목록을 선택했습니다.")
+        if not quizzes:
+            print("등록된 퀴즈가 없습니다.")
+        else:
+            for number, quiz in enumerate(quizzes, start=1):
+                print(number, quiz.question)
     elif choice == "4":
         print("최고 점수 확인을 선택했습니다.")
     elif choice == "5":
