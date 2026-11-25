@@ -43,6 +43,7 @@ quiz5 = Quiz(
 )
 
 quizzes = [quiz1, quiz2, quiz3, quiz4, quiz5]
+best_score = None
 print("등록된 퀴즈 수:", len(quizzes))
 
 print("운동·러닝 퀴즈 게임에 오신 것을 환영합니다!")
@@ -82,6 +83,8 @@ while True:
             else:
                 print("오답입니다.")
         print("결과:", len(quizzes), "문제 중", score, "문제 정답")
+        if best_score is None or score > best_score:
+            best_score = score        
     elif choice == "2":
         print("퀴즈 추가를 선택했습니다.")
     elif choice == "3":
@@ -91,7 +94,10 @@ while True:
             for number, quiz in enumerate(quizzes, start=1):
                 print(number, quiz.question)
     elif choice == "4":
-        print("최고 점수 확인을 선택했습니다.")
+        if best_score is None:
+            print("아직 퀴즈를 풀지 않았습니다.")
+        else:
+            print("최고 정답 수:", best_score)
     elif choice == "5":
         print("게임을 종료합니다.")
         break
