@@ -86,7 +86,30 @@ while True:
         if best_score is None or score > best_score:
             best_score = score        
     elif choice == "2":
-        print("퀴즈 추가를 선택했습니다.")
+        while True:
+            question = input("새 문제를 입력하세요: ").strip()
+            if question:
+                break
+            print("문제 내용을 입력해 주세요.")
+        choices = []
+        for number in range(1, 5):
+            while True:
+                choice_text = input(f"선택지 {number}을 입력하세요: ").strip()
+                if choice_text:
+                    choices.append(choice_text)
+                    break
+                print("선택지 내용을 입력해 주세요.")
+        while True:
+            try:
+                answer = int(input("정답 번호를 입력하세요 (1~4): ").strip())
+                if 1 <= answer <= 4:
+                    break
+                print("1부터 4까지의 번호를 입력해 주세요.")
+            except ValueError:
+                print("숫자로 입력해 주세요.")
+        new_quiz = Quiz(question, choices, answer)
+        quizzes.append(new_quiz)
+        print("퀴즈가 추가됐습니다.")
     elif choice == "3":
         if not quizzes:
             print("등록된 퀴즈가 없습니다.")
