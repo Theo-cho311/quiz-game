@@ -68,3 +68,17 @@ JSON 데이터의 구조는 다음과 같습니다.
 `state.json`은 개인 실행 데이터이므로 `.gitignore`에서 Git 추적 대상에서 제외합니다. GitHub 저장소를 복제한 뒤 처음 실행하면 기본 퀴즈 5개로 시작합니다.
 
 이 프로젝트는 Git clone 및 pull 실습을 완료했습니다.
+
+## 제출용 스크린샷
+
+과제 실행 및 Git 작업을 확인한 화면입니다. `state.json`은 Git에서 제외하므로, 아래 실행 화면의 추가 퀴즈와 최고 점수는 촬영 당시 로컬 데이터입니다.
+
+| 항목 | 스크린샷 |
+|---|---|
+| Git 커밋 13개와 브랜치 병합 | [Git 이력](screenshots/01-git-history.png) |
+| 개발 환경의 Python·Git 버전 | [버전 확인](screenshots/02-python-git-versions.png) |
+| 퀴즈 목록 | [퀴즈 목록](screenshots/03-quiz-list.png) |
+| 최고 점수 확인 | [최고 점수](screenshots/04-best-score.png) |
+| 퀴즈 추가 | [퀴즈 추가](screenshots/05-add-quiz.png) |
+| 퀴즈 풀이 결과 | [퀴즈 플레이](screenshots/06-play-result.png) |
+| VS Code 프로젝트 화면(복제본) | [VS Code](screenshots/07-vscode-project.png) |
